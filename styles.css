@@ -1,0 +1,27 @@
+@import url('normalize.css');
+@import url('layout.css');
+@import url('main.css');
+@import url('footer.css');
+
+* {
+    font-family: 'Inter', sans-serif;
+
+    box-sizing: border-box;
+}
+
+
+*:root {
+    --font-color-primary: #141414;
+    --font-color-secondary: #252525;
+    --font-color-body: #1a1a1a;
+    --accent-blue: #00B3DB;
+    --accent-blue-bkrd: #00b3db0c;
+    --accent-orange: #DB4F00;
+    --accent-orange-bkrd: #db500009;
+    --accent-pink: #FE4185;
+    --accent-pink-bkrd: #fe418610;
+    --accent-purple: #bb68ff;
+    --accent-purple-bkrd: #b241fe0c;
+
+    --font-size-title: 22px;
+}
