@@ -1,0 +1,71 @@
+a:link {
+    color: var(--font-color-secondary);
+}
+a:visited {
+    color: var(--font-color-secondary);
+}
+
+footer a:link {
+    color: var(--font-color-primary);
+}
+
+footer a:visited {
+    color: var(--font-color-primary);
+}
+
+@media screen and (min-width: 526px) {
+    :root {
+        --font-size-title: 28px;
+    }
+}
+
+html { 
+    scroll-behavior: smooth;
+}
+
+main p {
+    color: var(--font-color-body);
+    font-size: 18px;
+
+    margin: 0;
+
+    line-height: 1.75rem;
+}
+
+main h2 {
+    font-size: 12px;
+    font-weight: 500;
+
+    padding: 16px 0 16px 0;
+    margin: 0;
+
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+main h3 {
+    color: var(--font-color-primary);
+    font-size: 22px;
+    font-weight: 600;
+
+    margin: 0;
+    padding: 0;
+}
+
+main article {
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-gap: 12px;
+}
+
+main article:not(:last-child) {
+    margin-bottom: 64px;
+}
+
+main > section {
+    margin-bottom: 256px;
+}
+
+img, a {
+    width: 100%;
+}
