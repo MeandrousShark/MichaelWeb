@@ -54,7 +54,7 @@ header h4 {
     grid-row: 8 / 9;
 
     font-size: 1rem;
-    font-weight: normal;
+    font-weight: 500;
     color: var(--font-color-secondary);
 
     position: relative;
@@ -86,7 +86,12 @@ header h4 a {
 
     gap: 1px;
 
-    transform: skewY(-3deg) translateY(-64px) scaleY(150%);
+    transform: skew(0deg,-3deg) translateY(-64px) scaleY(1.5);
+    -webkit-transform: skew(0deg,-3deg) translateY(-64px) scaleY(1.5);
+    -moz-transform: skew(0deg,-3deg) translateY(-64px) scaleY(1.5);
+    -o-transform: skew(0deg,-3deg) translateY(-64px) scaleY(1.5);
+    -ms-transform: skew(0deg,-3deg) translateY(-64px) scaleY(1.5);
+
 }
 
 #nat-c {
@@ -101,7 +106,7 @@ header h4 a {
 #nat-f {
     grid-column: 19 / 25;
 }
-#nat-j {
+#nat-g {
     grid-column: 25 / 31;
 }
 #nat-a {
