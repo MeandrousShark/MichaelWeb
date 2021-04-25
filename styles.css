@@ -1,5 +1,6 @@
 @import url('normalize.css');
 @import url('layout.css');
+@import url('header.css');
 @import url('main.css');
 @import url('footer.css');
 
@@ -11,7 +12,7 @@
 
 
 *:root {
-    --font-color-primary: #141414;
+    --font-color-primary: #1f1f1f;
     --font-color-secondary: #252525;
     --font-color-body: #1a1a1a;
     --accent-blue: #00B3DB;

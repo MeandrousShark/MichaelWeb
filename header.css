@@ -1,0 +1,141 @@
+
+header {
+    /* grid-column: 1 / 4; Exists in layout.css*/
+
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: minmax(16px, 1fr) auto minmax(16px, 1fr);
+    grid-template-rows: 1fr 1fr 2fr auto auto 2fr 1fr 1fr;
+
+    background: #e1e1e1;
+
+    overflow: hidden;
+}
+header h1 {
+    justify-self: center;
+    align-self: center;
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+
+    font-size: var(--font-size-title);
+    font-weight: 800;
+    color: var(--font-color-primary);
+
+    margin: 16px 0 0 0;
+    padding: 0 0 0 0;
+    height: min-content;
+
+    position: relative;
+    z-index: 2;
+}
+
+header img {
+    width: 250px;
+    height: 250px;
+    object-fit: fill;
+    object-position: 50% 50%;
+
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+
+    border-radius: 300px;
+
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.329);;
+
+    position: relative;
+    z-index: 2;
+}
+
+header h4 {
+    justify-self: center;
+    align-self: end;
+    grid-column: 2 / 3;
+    grid-row: 8 / 9;
+
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--font-color-secondary);
+
+    position: relative;
+    z-index: 2;
+}
+header h4::after {
+    border-style: solid;
+	border-width: 0.15em 0.15em 0 0;
+	content: '';
+	display: inline-block;
+	height: 0.45em;
+	left: .5em;
+	position: relative;
+	top: 0.15em;
+	transform: rotate(135deg);
+	vertical-align: top;
+	width: 0.45em;
+}
+header h4 a {
+    text-decoration: none;
+}
+#header-background {
+    grid-column: 1 / 5;
+    grid-row: 1 / 9;
+
+    display: grid;
+    grid-template-columns: repeat(42, 1fr);
+    grid-template-rows: 5fr 3sfr;
+
+    gap: 1px;
+
+    transform: skewY(-3deg) translateY(-64px) scaleY(150%);
+}
+
+#nat-c {
+    grid-column: 1 / 7;
+}
+#nat-d {
+    grid-column: 7 / 13;
+}
+#nat-e {
+    grid-column: 13 / 19;
+}
+#nat-f {
+    grid-column: 19 / 25;
+}
+#nat-j {
+    grid-column: 25 / 31;
+}
+#nat-a {
+    grid-column: 31 / 37;
+}
+#nat-b {
+    grid-column: 37 / 43;
+}
+
+#acc-c {
+    grid-column: 5 / 9;
+}
+#acc-d {
+    grid-column: 11 / 15;
+}
+#acc-f {
+    grid-column: 23 / 27;
+}
+#acc-g {
+    grid-column: 29 / 33;
+}
+#acc-a {
+    grid-column: 35 / 39;
+}
+
+#header-background .key-b {
+    background: rgb(170,170,170);
+    background: linear-gradient(183deg, rgba(170,170,170,1) 0%, rgba(216,216,216,1) 100%); 
+
+    grid-row: 1 / 2;
+}
+
+#header-background .key-w {
+    background-color: rgb(238, 240, 242);
+
+    grid-row: 1 / 3;
+}
