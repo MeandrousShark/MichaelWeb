@@ -8,7 +8,7 @@ body {
     color: var(--font-color-primary);
 }
 
-body main {
+main {
     grid-column: 2 / 3;
 }
 

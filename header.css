@@ -6,7 +6,7 @@ header {
 
     display: grid;
     grid-template-columns: minmax(16px, 1fr) auto minmax(16px, 1fr);
-    grid-template-rows: 1fr 1fr 2fr auto auto 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr auto auto auto 3fr 1fr 1fr;
 
     background: #e1e1e1;
 
@@ -38,6 +38,7 @@ header img {
 
     grid-column: 2 / 3;
     grid-row: 4 / 5;
+    justify-self: center;
 
     border-radius: 300px;
 
@@ -46,16 +47,30 @@ header img {
     position: relative;
     z-index: 2;
 }
+header h3 {
+    grid-column: 2 / 3;
+    grid-row: 6 / 7;
 
+    color: var(--font-color-primary);
+    font-weight: 400;
+    font-size: 1rem;
+
+    margin: 8px;
+
+    position: relative;
+    z-index: 2;
+}
 header h4 {
     justify-self: center;
     align-self: end;
     grid-column: 2 / 3;
-    grid-row: 8 / 9;
+    grid-row: 9 / 10;
 
     font-size: 1rem;
     font-weight: 500;
     color: var(--font-color-secondary);
+
+    margin-right: 8px;
 
     position: relative;
     z-index: 2;
@@ -76,6 +91,23 @@ header h4::after {
 header h4 a {
     text-decoration: none;
 }
+
+header > a {
+    grid-column: 2 / 3;
+    grid-row: 7 / 8;
+
+    justify-self: center;
+    align-self: start;
+
+    padding: 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--font-color-secondary);
+
+    position: relative;
+    z-index: 2;
+}
+
 #header-background {
     grid-column: 1 / 5;
     grid-row: 1 / 9;
