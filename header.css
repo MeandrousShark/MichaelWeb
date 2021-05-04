@@ -165,14 +165,13 @@ header > div > a {
 }
 
 #header-background .key-b {
-    background: rgb(170,170,170);
-    background: linear-gradient(183deg, rgba(170,170,170,1) 0%, rgba(216,216,216,1) 100%); 
+    background: rgb(0, 0, 0);
+    background: linear-gradient(183deg, rgb(7, 7, 7) 0%, rgb(146, 146, 146) 100%); 
 
     grid-row: 1 / 2;
 }
 
 #header-background .key-w {
-    background-color: rgb(238, 240, 242);
-
+    background: rgb(255, 255, 255) linear-gradient(183deg, rgb(134, 134, 134) 0%, rgb(255, 255, 255) 100%);
     grid-row: 1 / 3;
 }
