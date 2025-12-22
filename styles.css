@@ -25,3 +25,56 @@
 
     --font-size-title: 22px;
 }
+
+.subhead {
+  margin-top: 0.5rem;
+  max-width: 60ch;
+  opacity: 0.85;
+}
+
+.cta-row {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.2);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-primary {
+  border-color: rgba(0,0,0,0.6);
+}
+
+.services {
+  padding: 2rem 1rem;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.service-card {
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.service-card ul {
+  padding-left: 1.2rem;
+}
+
+.text-link {
+  font-weight: 600;
+  text-decoration: none;
+}
