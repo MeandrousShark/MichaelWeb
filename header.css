@@ -110,6 +110,16 @@ header > div > a {
     padding: 8px;
 }
 
+.hero-text {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    padding: 1rem 1.25rem 1.5rem;
+    position: relative;
+    top: -20px;
+    z-index: 1;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
 #header-background {
     grid-column: 1 / 5;
     grid-row: 1 / 10;
