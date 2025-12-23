@@ -327,3 +327,16 @@ header h3 {
 .video-section {
   display: block !important;
 }
+
+#services {
+  text-align: center;
+}
+
+#services .services-grid {
+  text-align: left;
+}
+
+#about-me h3{
+  text-align: center;
+}
+
