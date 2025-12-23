@@ -44,3 +44,60 @@ header .subhead {
   position: relative;
   z-index: 5;
 }
+
+/* Dark mode: keep header graphic intact and shift page chrome */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --font-color-primary: #f2f2f2;
+    --font-color-secondary: #d4d4d4;
+    --font-color-body: #c7c7c7;
+  }
+
+  body,
+  main > section {
+    background-color: #0f1115;
+  }
+
+  .service-card,
+  .contact-card {
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .contact-card {
+    background: rgba(20, 20, 20, 0.78);
+  }
+
+  .btn {
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+
+  .btn-primary {
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .btn:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .icon-link {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  /* Keep the header graphic and text on the light scheme */
+  header {
+    background-color: #e1e1e1;
+  }
+
+  header h1,
+  header h3,
+  header h4,
+  header .subhead,
+  header a,
+  header .btn {
+    color: #1f1f1f;
+  }
+
+  #header-background .key-w {
+    background: rgb(210, 210, 210) linear-gradient(183deg, rgb(120, 120, 120) 0%, rgb(210, 210, 210) 100%);
+  }
+}

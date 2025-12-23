@@ -27,3 +27,14 @@
 #services .services-grid {
   text-align: left;
 }
+
+@media (prefers-color-scheme: dark) {
+  #services .text-link {
+    display: inline-block;
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.08);
+    color: #f2f2f2;
+  }
+}

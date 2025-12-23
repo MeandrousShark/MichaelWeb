@@ -22,7 +22,7 @@
   border: 1px solid rgba(0,0,0,0.12);
   border-radius: 16px;
   padding: 1.25rem;
-  background: rgba(255,255,255,0.65);
+  background: rgba(255,255,255,0.45);
   backdrop-filter: blur(6px);
 }
 
@@ -101,6 +101,28 @@
 /* make card content left-aligned, even if section is centered */
 #contact-me .contact-card {
   text-align: left;
+}
+
+@media (prefers-color-scheme: dark) {
+  .contact-card {
+    background: rgba(18, 18, 18, 0.85);
+    border-color: rgba(255, 255, 255, 0.14);
+  }
+
+  #contact-me .contact-email.btn {
+    border-color: #ffffff;
+  }
+
+  .icon-link {
+    border-color: rgba(255, 255, 255, 0.45);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .icon-link svg,
+  .icon-link svg path,
+  .icon-link svg g {
+    fill: #f2f2f2 !important;
+  }
 }
 
 /* Contact email card alignment */
