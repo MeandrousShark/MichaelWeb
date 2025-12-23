@@ -1,0 +1,29 @@
+/* Services: layout and card styling for the services section */
+.services {
+  padding: 2rem 1rem;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.service-card {
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.service-card ul {
+  padding-left: 1.2rem;
+}
+
+#services {
+  text-align: center;
+}
+
+#services .services-grid {
+  text-align: left;
+}

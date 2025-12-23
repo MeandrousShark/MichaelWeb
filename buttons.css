@@ -1,0 +1,33 @@
+/* Links + buttons: shared anchor/button styling and CTA layout */
+.text-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.2);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn:hover {
+  background-color: rgba(0,0,0,0.04);
+}
+
+.btn-primary {
+  border-color: rgba(0,0,0,0.6);
+}
+
+.cta-row {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
