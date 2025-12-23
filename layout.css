@@ -1,17 +1,22 @@
 body {
     display: grid;
     grid-auto-rows: auto;
-    grid-template-columns: minmax(16px, 1fr) minmax(auto, 870px) minmax(16px, 1fr);
+    grid-template-columns: minmax(16px, 1fr) minmax(0, 870px) minmax(16px, 1fr);
 
     background-color: #f8f8f8;
 
     color: var(--font-color-primary);
 }
 
+
 main {
     grid-column: 2 / 3;
 }
 
 header {
+    grid-column: 1 / 4;
+}
+
+footer {
     grid-column: 1 / 4;
 }

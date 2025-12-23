@@ -2,7 +2,6 @@
 @import url('layout.css');
 @import url('header.css');
 @import url('main.css');
-@import url('footer.css');
 
 * {
     font-family: 'Inter', sans-serif;
@@ -84,9 +83,6 @@
   text-decoration: none;
 }
 
-header h3 {
-  margin-bottom: 0.75rem;
-}
 
 .text-link {
   display: inline-block;
@@ -177,6 +173,32 @@ header {
   }
 }
 
+@media (max-width: 720px) {
+  .contact {
+    padding: 2rem 1rem;
+  }
+
+  .contact-card {
+    padding: 1rem;
+  }
+
+  .contact-actions {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .social-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .contact-email.btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 /* --- Contact layout overrides (wins against old footer styles) --- */
 #contact-me.contact {
   display: block;          /* kills any inherited flex/grid footer layout */
@@ -210,7 +232,7 @@ header {
   text-align: left;
 }
 
-contact-me.contact {
+#contact-me.contact {
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -225,9 +247,6 @@ header .subhead {
   z-index: 5;
 }
 
-header h3 {
-  opacity: 0.9;
-}
 
 .btn {
   transition: background-color 0.15s ease, border-color 0.15s ease;
@@ -261,18 +280,42 @@ header h3 {
 #contact-me .contact-small {
   margin-top: 0.75rem;
   text-align: left;
+  overflow-wrap: anywhere;
 }
 
 #contact-me .mono {
   display: inline-block;
 }
 
-.video-section {
-  padding: 2.5rem 1rem;
+@media (max-width: 600px) {
+  #contact-me .contact-actions {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  #contact-me .social-row {
+    justify-self: start;
+  }
 }
 
-.video-section h2 {
+/* Video section */
+#video-grid {
+  display: block;
+}
+
+.video-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
   text-align: center;
+}
+
+.video-section h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  text-align: center;
+  letter-spacing: 0.02em;
 }
 
 .video-section .section-intro {
@@ -284,48 +327,17 @@ header h3 {
 
 .video-section .videos {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1rem;
-}
-
-.video-section h2 {
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-  text-align: center;
-  letter-spacing: 0.02em;
-}
-
-/* Force Performance Examples section to be a centered column */
-.video-section {
+  width: 100%;
   max-width: 1100px;
-  margin: 0 auto;
-  padding: 2.5rem 1rem;
-  text-align: center;
-}
-
-/* Kill any inherited grid/flex layouts inside the section header area */
-.video-section > h2,
-.video-section > .section-intro {
-  max-width: 65ch;
   margin-left: auto;
   margin-right: auto;
+  justify-content: center;
 }
 
-
-@media (max-width: 650px) {
-  .video-section .videos {
-    grid-template-columns: 1fr;
-    max-width: 560px;
-  }
-}
-
-.video-section .videos {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.video-section {
-  display: block !important;
+.video-section .videos iframe:first-child {
+  grid-column: 1 / -1;
 }
 
 #services {
@@ -339,4 +351,3 @@ header h3 {
 #about-me h3{
   text-align: center;
 }
-

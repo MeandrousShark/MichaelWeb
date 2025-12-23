@@ -5,7 +5,7 @@ header {
     height: 100vh;
 
     display: grid;
-    grid-template-columns: minmax(16px, 1fr) auto minmax(16px, 1fr);
+    grid-template-columns: minmax(16px, 1fr) minmax(0, 870px) minmax(16px, 1fr);
     grid-template-rows: 1fr 1fr 1fr auto auto auto auto 3fr 1fr 1fr;
 
     background: #e1e1e1;
@@ -56,6 +56,8 @@ header h3 {
     font-size: 1rem;
 
     margin: 8px;
+    margin-bottom: 0.75rem;
+    opacity: 0.9;
 
     position: relative;
     z-index: 2;
@@ -114,7 +116,7 @@ header > div > a {
 
     display: grid;
     grid-template-columns: repeat(42, 1fr);
-    grid-template-rows: 5fr 3sfr;
+    grid-template-rows: 5fr 3fr;
 
     gap: 1px;
 
