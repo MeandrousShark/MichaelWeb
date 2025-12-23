@@ -20,6 +20,16 @@
   padding-left: 1.2rem;
 }
 
+.service-card .text-link {
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.6);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
 #services {
   text-align: center;
 }
