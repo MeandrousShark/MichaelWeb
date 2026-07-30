@@ -134,10 +134,19 @@
   display: inline-block;
 }
 
+/* Home-page footer holds one card now — the checklist lives on the contact page. */
+#contact-me .contact-grid-slim {
+  max-width: 640px;
+}
+
 @media (min-width: 900px) {
   .contact-grid {
     grid-template-columns: 1fr 1.2fr;
     align-items: start;
+  }
+
+  .contact-grid.contact-grid-slim {
+    grid-template-columns: 1fr;
   }
 
   .contact-checklist {

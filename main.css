@@ -77,6 +77,11 @@ main > section {
     background-color: #f8f8f8;
 }
 
+/* The last section runs into the footer, so it doesn't need the full gap. */
+main > section:last-child {
+    padding-bottom: 64px;
+}
+
 img {
     width: 100%;
 }

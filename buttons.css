@@ -13,6 +13,8 @@
   border: 1px solid rgba(0,0,0,0.6);
   text-decoration: none;
   font-weight: 600;
+  /* Links get this for free; <button> doesn't. */
+  cursor: pointer;
   transition: background-color 0.15s ease, border-color 0.15s ease;
 }
 
@@ -22,6 +24,41 @@
 
 .btn-primary {
   border-color: rgba(0,0,0,0.6);
+}
+
+/* Always-available contact button. Sits above content, out of the way of the
+   safe area on phones with rounded corners or a home indicator. */
+.btn-float {
+  position: fixed;
+  z-index: 50;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  padding: 0.75rem 1.25rem;
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+.btn-float:hover {
+  background-color: #ffffff;
+}
+
+.btn-float:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+}
+
+@media print {
+  .btn-float {
+    display: none;
+  }
+}
+
+/* On narrow screens the button sits close enough to the last line of the page
+   to cover it, so pages carrying one reserve the clearance. */
+@media (max-width: 720px) {
+  body:has(.btn-float) {
+    padding-bottom: 4.5rem;
+  }
 }
 
 .cta-row {

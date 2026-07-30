@@ -1,0 +1,258 @@
+/* Contact form: page header, fields, spam-check widget, and status messages */
+
+/* header.css builds the home page's full-viewport piano-key hero out of bare
+   `header` selectors, so an inner page has to opt out of all of it. Switching to
+   block layout also neutralizes the grid-row placement those rules apply to h1,
+   h2, and .subhead. */
+header.page-head {
+  grid-column: 2 / 3;
+  display: block;
+  height: auto;
+  background: transparent;
+  overflow: visible;
+  padding: 2.5rem 1rem 1rem;
+}
+
+.page-back {
+  text-align: left;
+  opacity: 0.75;
+  font-weight: 600;
+}
+
+header.page-head h1 {
+  margin: 1rem 0 0;
+  font-size: calc(var(--font-size-title) + 8px);
+}
+
+header.page-head .subhead {
+  margin: 0.75rem auto 0;
+}
+
+.form-card {
+  margin-bottom: 1rem;
+}
+
+main .contact-card {
+  margin-top: 1rem;
+}
+
+/* --- Fields --- */
+.field {
+  margin-bottom: 1.1rem;
+}
+
+.field label,
+.service-field legend {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  color: var(--font-color-secondary);
+}
+
+.optional {
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="tel"],
+.field input[type="date"],
+.field textarea {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  font-size: 16px; /* keeps iOS from zooming on focus */
+  color: var(--font-color-body);
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.22);
+  border-radius: 10px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px var(--accent-blue-bkrd);
+}
+
+.field input:user-invalid,
+.field textarea:user-invalid {
+  border-color: var(--accent-orange);
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 8rem;
+}
+
+.field-hint {
+  margin-top: 0.35rem;
+  font-size: 15px;
+  opacity: 0.7;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0 1rem;
+}
+
+/* --- Service and student radios --- */
+.service-field,
+.student-field {
+  border: none;
+  padding: 0;
+  margin: 0 0 1.1rem;
+}
+
+.radio-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0.5rem 0.85rem;
+  font-weight: 500;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-radius: 999px;
+  background: #fff;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.radio:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.radio:has(input:checked) {
+  border-color: var(--accent-blue);
+  background-color: var(--accent-blue-bkrd);
+}
+
+.radio:has(input:focus-visible) {
+  box-shadow: 0 0 0 3px var(--accent-blue-bkrd);
+}
+
+/* Only asked when the enquiry is about lessons. */
+.student-field {
+  display: none;
+}
+
+.contact-form:has(input[name="service"][value="lessons"]:checked) .student-field {
+  display: block;
+}
+
+/* --- Honeypot: present for bots, gone for everyone else --- */
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* --- Spam check widget --- */
+.altcha {
+  display: block;
+  margin: 0 0 1.1rem;
+  max-width: 20rem;
+  --altcha-border-radius: 10px;
+  --altcha-border-width: 1px;
+  --altcha-color-border: rgba(0, 0, 0, 0.18);
+  --altcha-color-base: #fff;
+  --altcha-color-text: var(--font-color-body);
+}
+
+/* --- Actions and status --- */
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+#submit-btn[disabled] {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.form-status {
+  margin: 0;
+  font-size: 15px;
+  opacity: 0.85;
+}
+
+.form-status:empty {
+  display: none;
+}
+
+.form-status-ok {
+  color: #0a6b3d;
+  font-weight: 600;
+  opacity: 1;
+}
+
+.form-status-error {
+  color: var(--accent-orange);
+  font-weight: 600;
+  opacity: 1;
+}
+
+/* Once sent, the confirmation is all that's left — including no second submit. */
+.contact-form.sent .field,
+.contact-form.sent .service-field,
+.contact-form.sent .altcha,
+.contact-form.sent .form-privacy,
+.contact-form.sent #submit-btn {
+  display: none;
+}
+
+.contact-form.sent .form-status {
+  font-size: 17px;
+}
+
+.form-privacy {
+  margin-top: 1.25rem;
+  font-size: 14px;
+  opacity: 0.65;
+  max-width: 62ch;
+}
+
+.noscript-note {
+  padding: 0.5rem 0;
+}
+
+.noscript-note a {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* --- Slim footer for the contact page --- */
+.contact-slim {
+  text-align: center;
+  padding: 2rem 1rem 3rem;
+}
+
+.contact-slim .contact-small {
+  text-align: center;
+}
+
+.contact-slim .contact-small a {
+  font-weight: 600;
+}
+
+.contact-slim .social-row {
+  justify-content: center;
+}
+
+@media (min-width: 620px) {
+  .field-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
