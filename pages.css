@@ -1,0 +1,58 @@
+/* Site navigation: shared markup on every page (header.css only targets the
+   home page's hero header, so the nav styling lives here instead, next to the
+   other page-level layout this file adds). */
+.site-nav {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 1rem 1rem 0;
+  font-weight: 600;
+}
+
+.site-nav a {
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid transparent;
+}
+
+.site-nav a[aria-current="page"] {
+  border-bottom-color: var(--accent-blue);
+}
+
+/* Service pages (piano lessons, weddings & events): the home page's
+   main > section rule reserves 256px of bottom padding per section, sized for
+   a few full-bleed scroll sections. These pages read top to bottom instead,
+   so sections need a smaller, denser rhythm. */
+.service-page > section {
+  padding-bottom: 2.5rem;
+}
+
+/* Reused for the small headshot on both service pages; the site-wide
+   `img { width: 100% }` rule would otherwise stretch it to the full column. */
+.inline-photo {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Photo slots stand in for real photos not taken yet (see PHOTO PENDING
+   comments in the markup), so the layout is finished before the images are. */
+.photo-slot {
+  margin-top: 1rem;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  border: 1px dashed rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.03);
+  color: var(--font-color-secondary);
+  opacity: 0.7;
+  font-size: 15px;
+}
