@@ -1,0 +1,6 @@
+# Local agent tool configuration and private planning notes, not part of the
+# published site. The repository root is the public web root, so anything
+# committed here is reachable at hannonpiano.com.
+.claude/
+CLAUDE.md
+docs/
