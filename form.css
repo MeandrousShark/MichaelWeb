@@ -13,12 +13,6 @@ header.page-head {
   padding: 2.5rem 1rem 1rem;
 }
 
-.page-back {
-  text-align: left;
-  opacity: 0.75;
-  font-weight: 600;
-}
-
 header.page-head h1 {
   margin: 1rem 0 0;
   font-size: calc(var(--font-size-title) + 8px);
