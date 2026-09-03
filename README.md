@@ -1,7 +1,7 @@
 # MichaelWeb
 personal website of myself thanks
 
-Static site, served by GitHub Pages at hannonpiano.com. No build step — `styles.css`
+Static site, served by GitHub Pages at hannonpiano.com. No build step. `styles.css`
 imports the section stylesheets in order.
 
 ## Contact form

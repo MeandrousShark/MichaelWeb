@@ -134,7 +134,7 @@
   display: inline-block;
 }
 
-/* Home-page footer holds one card now — the checklist lives on the contact page. */
+/* Home-page footer holds one card now; the checklist lives on the contact page. */
 #contact-me .contact-grid-slim {
   max-width: 640px;
 }

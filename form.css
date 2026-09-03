@@ -204,7 +204,7 @@ main .contact-card {
   opacity: 1;
 }
 
-/* Once sent, the confirmation is all that's left — including no second submit. */
+/* Once sent, the confirmation is all that's left, including no second submit. */
 .contact-form.sent .field,
 .contact-form.sent .service-field,
 .contact-form.sent .altcha,

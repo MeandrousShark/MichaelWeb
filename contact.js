@@ -33,7 +33,7 @@
   if (bounced) setStatus(bounced, 'error');
 
   /* The lessons-only question is hidden by CSS when it doesn't apply, and a
-     hidden required radio would block submission with no visible reason — so
+     hidden required radio would block submission with no visible reason, so
      the requirement follows the visibility. */
   const studentRadios = form.querySelectorAll('input[name="student"]');
   function syncStudentRequired() {
@@ -69,7 +69,7 @@
 
     if (!payload) {
       setBusy(true, 'Checking…');
-      setStatus('Running the spam check — one moment.');
+      setStatus('Running the spam check, one moment.');
       return;
     }
 
@@ -93,7 +93,7 @@
         widget.reset();
         setBusy(false);
         form.classList.add('sent');
-        setStatus('Thanks — your message is on its way. I’ll be in touch soon.', 'ok');
+        setStatus('Thanks, your message is on its way. I’ll be in touch soon.', 'ok');
         return;
       }
 
