@@ -33,10 +33,28 @@
         "addressRegion": "WA",
         "addressCountry": "US"
       },
-      "areaServed": {
-        "@type": "City",
-        "name": "Bellingham"
-      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Bellingham"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Whatcom County"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Skagit County"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Snohomish County"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "King County"
+        }
+      ],
       "founder": {
         "@type": "Person",
         "name": "Michael Hannon",
@@ -81,6 +99,12 @@
     </script>
 </head>
 <body>
+    <nav class="site-nav" aria-label="Primary">
+        <a href="/" aria-current="page">Home</a>
+        <a href="/piano-lessons/">Lessons</a>
+        <a href="/wedding-event-piano/">Weddings and Events</a>
+        <a href="/contact.html">Contact</a>
+    </nav>
     <header>
         <div class="hero">
             <img src="michael.webp" alt="Michael Hannon, pianist and piano teacher in Bellingham, WA" width="250" height="250">
@@ -126,7 +150,7 @@
 
         <div class="service-grid">
             <article class="service-card" id="lessons">
-            <h3>Piano Lessons</h3>
+            <h3><a href="/piano-lessons/">Piano Lessons</a></h3>
             <p>
                 Private lessons for adults and students of all levels, with a focus on
                 classical foundations, technique, and musical confidence.
@@ -136,11 +160,11 @@
                 <li>Online lessons available</li>
                 <li>Beginner through advanced</li>
             </ul>
-            <a class="text-link" href="contact.html?about=lessons">Ask about availability →</a>
+            <a class="text-link" href="/piano-lessons/">Learn more about lessons →</a>
             </article>
 
             <article class="service-card" id="events">
-            <h3>Weddings & Events</h3>
+            <h3><a href="/wedding-event-piano/">Weddings & Events</a></h3>
             <p>
                 Live piano music for ceremonies, cocktail hours, receptions, and private events.
                 Classical and contemporary repertoire, with custom requests welcome.
@@ -150,7 +174,7 @@
                 <li>Custom song requests</li>
                 <li>Available for travel</li>
             </ul>
-            <a class="text-link" href="contact.html?about=event">Book event music →</a>
+            <a class="text-link" href="/wedding-event-piano/">Learn more about weddings &amp; events →</a>
             </article>
 
             <article class="service-card" id="collab">
