@@ -20,7 +20,7 @@
   border-bottom-color: var(--accent-blue);
 }
 
-/* Service pages (piano lessons, weddings & events): the home page's
+/* Service pages (weddings & events): the home page's
    main > section rule reserves 256px of bottom padding per section, sized for
    a few full-bleed scroll sections. These pages read top to bottom instead,
    so sections need a smaller, denser rhythm. */
@@ -28,7 +28,7 @@
   padding-bottom: 2.5rem;
 }
 
-/* Reused for the small headshot on both service pages; the site-wide
+/* Reused for the small headshot on the weddings and events page; the site-wide
    `img { width: 100% }` rule would otherwise stretch it to the full column. */
 .inline-photo {
   width: 100%;
