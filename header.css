@@ -12,6 +12,21 @@ header {
 
     overflow: hidden;
 }
+header .eyebrow {
+    justify-self: center;
+    grid-column: 2 / 3;
+
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--font-color-secondary);
+    opacity: 0.85;
+
+    margin: 0;
+
+    position: relative;
+    z-index: 2;
+}
+
 header h1 {
     justify-self: center;
     align-self: center;
